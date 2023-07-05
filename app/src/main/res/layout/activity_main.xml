@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-
-
-
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -22,11 +15,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_surprised_pikachu_meme" />
+        app:srcCompat="@drawable/ic_surprised_pikachu_meme"
+        tools:ignore="ContentDescription" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/contenedor"
-        android:name="com.example.fragmentguide0.QuestionFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="383dp"
         android:layout_height="39dp"
         android:layout_marginTop="2dp"
@@ -34,6 +28,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="@string/abrir"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/salir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
